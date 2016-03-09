@@ -30,7 +30,12 @@ public class MergeSortTester
      ******************************/
     public static void main( String[] args ) 
     {
+	long startTime = System.currentTimeMillis();
+	//Insert MergeSort fxn with BLANK elements
+	long endTime = System.currentTimeMillis();
 
+	long elapsedTime = endTime - startTime;
+	System.out.print("Time for BLANK elements: " + elapsedTime);
     }//end main
 
 }//end class
