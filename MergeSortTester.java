@@ -5,11 +5,11 @@
   <INSERT YOUR DISTILLATION OF ALGO HERE>
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
-  <INSERT YOUR EXECUTION TIME CATEGORIZATION OF MERGESORT HERE>
+  O(nlogn)
 
   Mean execution times for dataset of size n:
   Batch size: <# of times each dataset size was run>
-  n=1       time: 
+  n=1       time: 238838.4
   n=10      time: 
   n=100     time: 
   ...
@@ -39,6 +39,7 @@ public class MergeSortTester
     public static void main( String[] args ) 
     {
 
+	int[] one = new int[1];
 	int[] ten = new int[10];
 	int[] hun = new int[100];
 	int[] thou = new int[1000];
@@ -52,26 +53,29 @@ public class MergeSortTester
 	long sum4 = 0;
 	long sum5 = 0;
 	long sum6 = 0;
+	long sum7 = 0;
 
 	int counter = 100; //number of repeated executions
 	while (counter > 0) {
 
-	    sum1 += timer(ten);
-	    sum2 += timer(hun);
-	    sum3 += timer(thou);
-	    sum4 += timer(tenThou);
-	    sum5 += timer(hunThou);
-	    sum6 += timer(milli);
+	    sum1 += timer(one);
+	    sum2 += timer(ten);
+	    sum3 += timer(hun);
+	    sum4 += timer(thou);
+	    sum5 += timer(tenThou);
+	    sum6 += timer(hunThou);
+	    sum7 += timer(milli);
 
 	    counter --;
 	}
 
-	System.out.println("Average time for n=10: " + sum1/10.0);
-	System.out.println("Average time for n=100: " + sum2/10.0);
-	System.out.println("Average time for n=1000: " + sum3/10.0);
-	System.out.println("Average time for n=10000: " + sum4/10.0);
-	System.out.println("Average time for n=100000 " + sum5/10.0);
-	System.out.println("Average time for n=1000000 " + sum6/10.0);
+	System.out.println("Average time for n=1: " + sum1/10.0);
+	System.out.println("Average time for n=10: " + sum2/10.0);
+	System.out.println("Average time for n=100: " + sum3/10.0);
+	System.out.println("Average time for n=1000: " + sum4/10.0);
+	System.out.println("Average time for n=10000: " + sum5/10.0);
+	System.out.println("Average time for n=100000 " + sum6/10.0);
+	System.out.println("Average time for n=1000000 " + sum7/10.0);
 
     }//end main
 
