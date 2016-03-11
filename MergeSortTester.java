@@ -4,9 +4,9 @@
   ALGORITHM:
   MergeSort contains two functions. Merge() compares respective elements of two lists
   and determines which is smaller and places them into another ordered list.
-  Sort() initially splits the large array into halves until the smallest lists contain
-  only one element, and then merges the smaller arrays back together into the largest
-  array, which should by now already be sorted.
+  Sort() initially splits the large array into halves until it reaches a point in which
+  the smallest lists contain only one element, and then merges the smaller arrays back 
+  together into the largest array, which should by now already be sorted.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
   O(nlogn)
@@ -19,13 +19,29 @@
   ...
   n=<huge>  time: 8.487531867E8
 
+  Utilizing a different computer:
+  Mean execution times for dataset of size n:
+  Batch size: 100
+  n=1       time: 245900
+  n=10      time: 20200
+  n=100     time: 100500
+  n=1000    time: 1063900
+  n=10000   time: 1.49395E7
+  n=100000  time: 1.1895E8
+  n=1000000 time: 1.2629411E9
+  
   ANALYSIS:
   The sort() part of MergeSort runs in logn time, since it splits the list in half
   and recursively runs on halves of the list after each turn.
-  The merge() part of MergeSort runs in constant time, since it needs to compare
+  The merge() part of MergeSort runs in n time, since it needs to compare
   all the respective elements of two lists until at least one of them is exhausted.
   The time gets increasing larger as the data sets get larger,
   with the exception of the first, n=1, case.
+
+  DOES OUR DATA SHOW THIS?
+  When taken with a large enough grain of salt, the nlog(n) time is shown by out data. 
+  Although it is not as clean as one might like, when graphing the points and then 
+  transcribing the line y=nlog(n) on to the same plane, similarities in growth can be found.
   ======================================*/
 
 public class MergeSortTester 
