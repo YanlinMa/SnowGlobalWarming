@@ -2,10 +2,11 @@
   class MergeSortTester
 
   ALGORITHM:
-  1. Set start time variable, run MergeSort, set end time variable.
-  2. Subtract end time from start time to get result.
-  3. Make arrays of different lengths and give them values to be sorted using MergeSort.
-  4. Time their executions and find the averages.
+  MergeSort contains two functions. Merge() compares respective elements of two lists
+  and determines which is smaller and places them into another ordered list.
+  Sort() initially splits the large array into halves until the smallest lists contain
+  only one element, and then merges the smaller arrays back together into the largest
+  array, which should by now already be sorted.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
   O(nlogn)
@@ -32,9 +33,10 @@ public class MergeSortTester
 
     /******************************
      * execution time analysis 
-     * <INSERT YOUR DESCRIPTION HERE OF 
-     *  YOUR APPARATUS FOR GENERATING EXECUTION 
-     *  TIME DATA...>
+     *   Set start time variable, run MergeSort, set end time variable.
+     *	 Subtract end time from start time to get result.
+     *   Make arrays of different lengths and give them values to be sorted using MergeSort.
+     *   Time their executions and find the averages.
      ******************************/
 
     public static long timer(int[] a) {
