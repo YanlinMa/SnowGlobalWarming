@@ -2,21 +2,25 @@
   class MergeSortTester
 
   ALGORITHM:
-  <INSERT YOUR DISTILLATION OF ALGO HERE>
+  1. Set start time variable, run MergeSort, set end time variable.
+  2. Subtract end time from start time to get result.
+  3. Make arrays of different lengths and give them values to be sorted using MergeSort.
+  4. Time their executions and find the averages.
 
   BIG-OH CLASSIFICATION OF ALGORITHM:
   O(nlogn)
 
   Mean execution times for dataset of size n:
-  Batch size: <# of times each dataset size was run>
-  n=1       time: 238838.4
-  n=10      time: 
-  n=100     time: 
+  Batch size: 100
+  n=1       time: 53838.8
+  n=10      time: 16838.3
+  n=100     time: 72759.5
   ...
-  n=<huge>  time: 
+  n=<huge>  time: 8.487531867E8
 
   ANALYSIS:
-  <INSERT YOUR RESULTS ANALYSIS HERE>
+  The time gets increasing bigger as the data sets get large,
+  with the exception of the first, n=1, case.
   ======================================*/
 
 public class MergeSortTester 
