@@ -19,7 +19,11 @@
   n=<huge>  time: 8.487531867E8
 
   ANALYSIS:
-  The time gets increasing bigger as the data sets get large,
+  The sort() part of MergeSort runs in logn time, since it splits the list in half
+  and recursively runs on halves of the list after each turn.
+  The merge() part of MergeSort runs in constant time, since it needs to compare
+  all the respective elements of two lists until at least one of them is exhausted.
+  The time gets increasing larger as the data sets get larger,
   with the exception of the first, n=1, case.
   ======================================*/
 
